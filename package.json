@@ -1,0 +1,22 @@
+{
+  "name": "fent-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ShdwTakashi",
+  "license": "ISC",
+  "description": "Fent; The Verification Bot",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "discord.js": "^14.16.3",
+    "djs-commander": "^0.0.50",
+    "dotenv": "^16.4.5",
+    "pogger": "^0.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^9.12.0"
+  }
+}
