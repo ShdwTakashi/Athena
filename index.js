@@ -1,5 +1,6 @@
 const { Client, GatewayIntentBits, IntentsBitField } = require('discord.js');
-const { CommandHandler } = require('djs-commander');
+// const { CommandHandler } = require('djs-commander');
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const path = require('path');
 const pogger = require('pogger');
 require('dotenv').config();
@@ -21,19 +22,24 @@ const client = new Client({
   partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
 });
 
-
-
 // Initialize commands map
 client.commands = new Map();
 
-// Initialize the CommandHandler from djs-commander
-new CommandHandler({
-  client,
-  commandsPath: path.join(__dirname, 'commands'),
-  eventsPath: path.join(__dirname, 'events'),
-  validationsPath: path.join(__dirname, 'validations'),
-  testServer: '1270894006896951326',
-});
+// Import commands dynamically
+const fs = require('node:fs');
+const commandsPath = path.join(__dirname, 'commands');
+const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+
+for (const file of commandFiles) {
+  const filePath = path.join(commandsPath, file);
+  const command = require(filePath);
+  // Set a new item in the Collection with the key as the command name and the value as the exported module
+  if ('data' in command && 'run' in command) {
+    client.commands.set(command.data.name, command);
+  } else {
+    console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "run" property.`);
+  }
+}
 
 // Log commands to verify they are loaded
 client.once('ready', () => {
@@ -51,7 +57,7 @@ client.on('interactionCreate', async interaction => {
   }
 
   const command = client.commands.get(interaction.commandName);
-
+  
   if (!command) {
     console.error(`No command found for ${interaction.commandName}`);
     return interaction.reply({ content: 'Unknown command.', ephemeral: true });

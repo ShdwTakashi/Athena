@@ -1,14 +1,15 @@
 {
-  "name": "fent-v2",
+  "name": "Athena",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "ShdwTakashi",
   "license": "ISC",
-  "description": "Fent; The Verification Bot",
+  "description": "Athena; The Verification Bot",
   "dependencies": {
     "axios": "^1.7.7",
     "discord.js": "^14.16.3",
