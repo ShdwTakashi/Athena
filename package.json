@@ -15,6 +15,7 @@
     "discord.js": "^14.16.3",
     "djs-commander": "^0.0.50",
     "dotenv": "^16.4.5",
+    "infisical": "^1.0.46",
     "pogger": "^0.0.9"
   },
   "devDependencies": {
