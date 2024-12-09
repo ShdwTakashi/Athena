@@ -43,8 +43,9 @@ for (const file of commandFiles) {
 
 // Log commands to verify they are loaded
 client.once('ready', () => {
-  console.log(`Logged in as ${client.user.tag}`);
-  console.log('Loaded commands:', Array.from(client.commands.keys()));
+    console.log(`Logged in as ${client.user.tag}`);
+    console.log('Loaded commands:', Array.from(client.commands.keys()));
+    require('./events/Ready/Activity')(client); // Import and execute Activity.js
 });
 
 client.on('interactionCreate', async interaction => {
@@ -78,4 +79,5 @@ client.on('interactionCreate', async interaction => {
 client.login(token).catch(error => {
   pogger.error('[CRASH]', 'Failed to login: ' + error);
 });
+
 // ShdwTakahi was here lol
