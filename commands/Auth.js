@@ -25,7 +25,7 @@ module.exports = {
     const state =
       Math.random().toString(36).substring(2, 15) +
       Math.random().toString(36).substring(2, 15);
-    const oauthUrl = `https://github.com/login/oauth/authorize?client_id=Ov23li9VfsE4O2An6BGY&redirect_uri=http://localhost:3000/callback&scope=user&state=${state}`;
+    const oauthUrl = `https://github.com/login/oauth/authorize?client_id=Ov23li9VfsE4O2An6BGY&redirect_uri=http://localhost:3000/callback&scope=read:user,user:email&state=${state}`;
 
     const button = new ButtonBuilder()
       .setLabel("Verify with GitHub")
