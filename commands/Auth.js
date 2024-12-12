@@ -80,6 +80,11 @@ module.exports = {
 
         const githubUser = userResponse.data;
 
+        // Send a confirmation message to the user
+        await interaction.followUp({
+          content: 'Your GitHub account has been successfully linked!',
+          ephemeral: true,
+        });
         // Notify the user of the successful verification
         await interaction.followUp({
           content: `Successfully verified! GitHub Username: ${githubUser.login}`,
