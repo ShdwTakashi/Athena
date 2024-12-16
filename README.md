@@ -1,4 +1,5 @@
-![Archive Dev (3)](https://github.com/user-attachments/assets/7ac0783c-3878-4829-adf8-f01e6520d7ff)
+
+![Untitled design](https://github.com/user-attachments/assets/a2480515-dd36-489b-8c00-c9d949dd6b50)
 
 # Overview
 This is a Discord bot that allows users to authenticate themselves using their GitHub accounts. This bot can be used to create a community of developers, provide privileged access to resources, or simply verify user identities.
