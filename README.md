@@ -25,15 +25,15 @@ This is a Discord ~~bot~~ Feature that allows users to authenticate themselves u
 ## Steps
 1. Clone the repository:
    
- `git clone https://github.com/your-username/your-repository.git`
+`git clone https://github.com/your-username/your-repository.git`
  
 2. Navigate to the project directory:
   
-   `cd your-repository`
+`cd your-repository`
    
 3. Install the dependencies:
 
-   `npm install` or `yarn install`
+`npm install` or `yarn install`
    
 4. Create a `.env` file in the project root and add the following environment variables:
 ```
@@ -45,4 +45,4 @@ ClientSecret = N/A
 Replace the `N/A` for your Actual Values.
 
 ## License
-This bot is released under the Apache License 2.0.
+This ~~bot~~ Repository is released under the Apache License 2.0.
