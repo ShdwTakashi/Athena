@@ -25,11 +25,11 @@ This is a Discord ~~bot~~ Feature that allows users to authenticate themselves u
 ## Steps
 1. Clone the repository:
    
-`git clone https://github.com/your-username/your-repository.git`
+`git clone https://github.com/ShdwTakashi/Athena`
  
 2. Navigate to the project directory:
   
-`cd your-repository`
+`cd Athena`
    
 3. Install the dependencies:
 
